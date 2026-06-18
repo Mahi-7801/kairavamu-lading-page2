@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-main: #FCFAF7;
+    --color-bg-card: #FFFFFF;
+    --color-bg-card-hl: #F4EDE6;
+    --color-bg-navbar: rgba(252, 250, 247, 0.85);
+    --color-theme-primary: #A68263;
+    --color-theme-secondary: #344F39;
+    --color-theme-light: #DBC1AC;
+    --color-theme-cream: #FAF6F2;
+    --color-theme-glow: rgba(52, 79, 57, 0.05);
+    --color-text-primary: #242E28;
+    --color-text-secondary: #4D5750;
+    --color-text-muted: #808A83;
+    --color-emerald: #344F39;
+    --color-emerald-bg: rgba(52, 79, 57, 0.06);
+    --color-emerald-border: rgba(52, 79, 57, 0.2);
+    --color-border-primary: rgba(166, 130, 99, 0.16);
+    --color-border-secondary: rgba(36, 46, 40, 0.04);
+    --color-border-accent: rgba(166, 130, 99, 0.3);
+    --font-serif: 'Google Sans', 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Google Sans', 'Poppins', system-ui, sans-serif;
+    --border-radius-sm: 8px;
+    --border-radius-md: 14px;
+    --border-radius-lg: 28px;
+    --border-radius-full: 9999px;
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --shadow-premium: 0 10px 40px -12px rgba(52, 79, 57, 0.08), 0 1px 3px rgba(0, 0, 0, 0.01);
+    --shadow-hover: 0 24px 48px -16px rgba(52, 79, 57, 0.18), 0 2px 8px rgba(52, 79, 57, 0.03);
+    --shadow-brand: 0 0 30px rgba(166, 130, 99, 0.06);
+    --shadow-button: 0 8px 20px -4px rgba(52, 79, 57, 0.25);
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-main);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gold-gradient px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-gold transition-all duration-300 hover:shadow-luxury hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-champagne-400 bg-white/70 px-7 py-3.5 text-sm font-semibold tracking-wide text-ink-800 backdrop-blur transition-all duration-300 hover:border-champagne-500 hover:bg-white hover:-translate-y-0.5;
+  }
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+  .glass-card {
+    @apply rounded-3xl border border-white/60 bg-white/60 shadow-luxury backdrop-blur-xl;
+  }
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-champagne-600;
+  }
+  .section-title {
+    @apply font-display text-4xl font-semibold leading-[1.15] text-ink-800 md:text-5xl;
+  }
+  .gold-text {
+    @apply bg-gold-gradient bg-clip-text text-transparent;
+  }
+  .emerald-text {
+    @apply bg-emerald-gradient bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .shimmer-text {
+    background: linear-gradient(90deg, #A68263 0%, #DBC1AC 25%, #FAF6F2 50%, #DBC1AC 75%, #A68263 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+::selection {
+  background: #DBC1AC;
+  color: #242E28;
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #FAF6F2; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #DBC1AC, #A68263);
+  border-radius: 8px;
+}
