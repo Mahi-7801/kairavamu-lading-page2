@@ -13,6 +13,8 @@ interface Treatment {
   image: string;
   benefits: string[];
   techniques?: string[];
+  price?: string;
+  priceNote?: string;
   offer?: string;
   accent: 'gold' | 'rose';
   reverse?: boolean;
@@ -27,6 +29,7 @@ const TREATMENTS: Treatment[] = [
     visual: 'carbon',
     image: '/carbon-peel.jpg',
     benefits: ['Deep Cleansing & Oil Control', 'Instant Glow & Skin Brightening', 'Minimizes Pores', 'Improves Skin Texture'],
+    price: '₹3,000 – ₹7,000/session',
     offer: 'Up To 40% OFF',
     accent: 'gold',
   },
@@ -38,6 +41,7 @@ const TREATMENTS: Treatment[] = [
     visual: 'laser',
     image: '/laser-toning.jpg',
     benefits: ['Reduces Pigmentation & Uneven Tone', 'Improves Acne Marks & Texture', 'Brightens Skin', 'Adds Natural Glow'],
+    price: '₹3,000 – ₹7,000/session',
     offer: 'Up To 40% OFF',
     accent: 'rose',
     reverse: true,
@@ -50,6 +54,8 @@ const TREATMENTS: Treatment[] = [
     visual: 'hair',
     image: '/laser-uhr1.jpg',
     benefits: ['Long Term Hair Reduction', 'No Ingrown Hair', 'No Skin Darkening', 'Saves Time & Effort'],
+    price: '₹1,000 – ₹30,000/session',
+    priceNote: 'pricing varies based on treatment area',
     offer: 'Up To 40% OFF',
     accent: 'gold',
   },
@@ -61,6 +67,7 @@ const TREATMENTS: Treatment[] = [
     visual: 'gfc',
     image: '/Hair%20GFC.webp',
     benefits: ['Reduces Hair Fall', 'Promotes Hair Regrowth & Density', 'Safe & Natural Treatment', 'Visible Results'],
+    price: '₹5,000 – ₹10,000/session',
     offer: 'Up To 40% OFF',
     accent: 'rose',
     reverse: true,
@@ -73,6 +80,7 @@ const TREATMENTS: Treatment[] = [
     visual: 'transplant',
     image: '/hair-transplant.jpg',
     benefits: ['Permanent & Natural Hair Growth', 'Restores Hairline & Confidence', 'Low Maintenance Solution', 'Life Changing Results'],
+    price: 'Contact for pricing',
     accent: 'gold',
   },
   {
@@ -84,6 +92,8 @@ const TREATMENTS: Treatment[] = [
     image: '/pmu-eyebrows1.jpg',
     benefits: ['Saves Time Everyday', 'Perfect Shape & Symmetry', 'Long Lasting & Smudgeproof', 'Natural Looking Results'],
     techniques: ['Microblading', 'Ombre Brows', 'Combination Brows'],
+    price: '₹20,000 – ₹40,000',
+    priceNote: 'Microblading / Ombre / Combination',
     offer: 'Up To 25% OFF',
     accent: 'gold',
   },
@@ -95,6 +105,8 @@ const TREATMENTS: Treatment[] = [
     visual: 'lips',
     image: '/pmu-lip1.jpg',
     benefits: ['Defines Lip Borders', 'Enhances Natural Lip Color', 'Long Lasting & Low Maintenance', 'Beautiful Natural Tint'],
+    price: '₹20,000 – ₹40,000',
+    priceNote: 'Based on pigmentation correction and technique',
     offer: 'Up To 25% OFF',
     accent: 'rose',
     reverse: true,
@@ -107,6 +119,8 @@ const TREATMENTS: Treatment[] = [
     visual: 'smp',
     image: '/SMP-Scalp-Micro-Pigmentation.webp',
     benefits: ['Instant Fuller Hair Look', 'Quick Results, Non-Surgical', 'Low Maintenance & Long Lasting', 'Boosts Confidence'],
+    price: '₹20,000 – ₹1,00,000',
+    priceNote: 'Pricing varies based on technique, area and customization',
     accent: 'gold',
   },
 ];
@@ -169,9 +183,15 @@ function TreatmentCard({ t, delay, visible }: { t: Treatment; delay: number; vis
         )}
 
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-champagne-100 bg-champagne-50/50 px-4 py-3">
+          {t.price && (
+            <div className="text-left">
+              <div className={`text-lg font-bold ${accentText}`}>{t.price}</div>
+              {t.priceNote && <div className="text-[10px] text-ink-500">{t.priceNote}</div>}
+            </div>
+          )}
           <a
             href="#contact"
-            className={`inline-flex items-center gap-1.5 rounded-full ${accentBg} px-5 py-2.5 text-xs font-semibold text-white transition-transform hover:scale-105`}
+            className={`inline-flex items-center gap-1.5 rounded-full ${accentBg} px-5 py-2.5 text-xs font-semibold text-white transition-transform hover:scale-105 ml-auto`}
           >
             Enquire <span className="material-symbols-outlined text-sm">arrow_forward</span>
           </a>

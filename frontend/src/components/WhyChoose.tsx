@@ -3,14 +3,12 @@ import { useCountUp } from '../hooks/useCountUp';
 import { useRef, useState } from 'react';
 
 const TRUST = [
-  { icon: 'auto_awesome', label: 'Advanced PMU Techniques' },
-  { icon: 'diamond', label: 'Natural Looking Results' },
-  { icon: 'palette', label: 'Customized Facial Mapping' },
-  { icon: 'reward', label: 'Premium Pigments' },
-  { icon: 'verified', label: 'Safe & Hygienic Procedures' },
+  { icon: 'auto_awesome', label: 'Personalized Treatment Plans' },
+  { icon: 'science', label: 'Advanced FDA-Approved Technology' },
   { icon: 'verified', label: 'Experienced Specialists' },
-  { icon: 'handshake', label: 'Long Lasting Results' },
-  { icon: 'science', label: 'Modern Aesthetic Clinic' },
+  { icon: 'handshake', label: 'Hygiene-Focused Procedures' },
+  { icon: 'schedule', label: 'Minimal Downtime Treatments' },
+  { icon: 'diamond', label: 'Comprehensive Skin, Hair & PMU' },
 ];
 
 const STATS = [

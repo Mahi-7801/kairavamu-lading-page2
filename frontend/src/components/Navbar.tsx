@@ -31,13 +31,7 @@ export function Navbar() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
           <a href="#home" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-gradient text-lg font-semibold text-white shadow-gold">
-              K
-            </div>
-            <div className="leading-tight">
-              <div className="font-display text-xl font-semibold text-ink-900">Kairavam</div>
-              <div className="text-[10px] uppercase tracking-[0.22em] text-champagne-600">PMU & Aesthetic Studio</div>
-            </div>
+            <img src="/logo_kairavam.png" alt="Kairavam" className="h-10 w-auto" />
           </a>
 
           <ul className="hidden items-center gap-7 lg:flex">

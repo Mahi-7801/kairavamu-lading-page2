@@ -8,11 +8,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
         <div className="md:col-span-1">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-gradient text-lg font-semibold text-white">K</div>
-            <div>
-              <div className="font-display text-xl font-semibold text-white">Kairavam</div>
-              <div className="text-[10px] uppercase tracking-[0.22em] text-champagne-300">PMU & Aesthetic Studio</div>
-            </div>
+            <img src="/logo_kairavam.png" alt="Kairavam" className="h-10 w-auto brightness-0 invert" />
           </div>
           <p className="mt-4 text-sm leading-relaxed text-ink-300">
             Premium Permanent Makeup clinic in Vijayawada — PMU Brows, Lip Blush, Eyeliner PMU, Brow Correction &
