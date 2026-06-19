@@ -27,9 +27,9 @@ export function Hero() {
           <h1 className="mt-6 font-display text-[2.6rem] font-semibold leading-[1.08] text-ink-900 sm:text-6xl lg:text-[4rem] animate-fade-up">
             Wake Up Beautiful
             <br />
-            <span className="shimmer-text">Every Day</span> With
+            <span className="shimmer-text">Every Day</span>
             <br />
-            Permanent Makeup
+            With Permanent Makeup
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-600 lg:mx-0 animate-fade-up" style={{ animationDelay: '0.1s' }}>
