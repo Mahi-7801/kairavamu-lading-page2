@@ -33,8 +33,8 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-600 lg:mx-0 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            PMU Brows, Lip Blush, Eyeliner PMU, Brow Correction & Scalp Micropigmentation — designed to enhance your
-            features with natural, long-lasting beauty at Vijayawada's premier aesthetic studio.
+            Expertly crafted permanent makeup designed to enhance your features with natural, long-lasting beauty at
+            Vijayawada's premier aesthetic studio.
           </p>
 
           <div className="mt-6 flex flex-wrap justify-center gap-2 lg:justify-start animate-fade-up" style={{ animationDelay: '0.2s' }}>
