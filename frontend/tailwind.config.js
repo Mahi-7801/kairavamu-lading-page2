@@ -65,6 +65,7 @@ export default {
         'pulse-gold': 'pulseGold 2.5s ease-in-out infinite',
         marquee: 'marquee 30s linear infinite',
         'scale-in': 'scaleIn 0.6s ease-out forwards',
+        wave: 'wave 1.2s ease-in-out infinite',
       },
       keyframes: {
         fadeUp: {
@@ -94,6 +95,13 @@ export default {
         scaleIn: {
           '0%': { opacity: '0', transform: 'scale(0.92)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        wave: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '20%': { transform: 'rotate(-15deg)' },
+          '40%': { transform: 'rotate(15deg)' },
+          '60%': { transform: 'rotate(-10deg)' },
+          '80%': { transform: 'rotate(10deg)' },
         },
       },
     },

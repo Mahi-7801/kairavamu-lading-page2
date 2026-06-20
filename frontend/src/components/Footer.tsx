@@ -55,7 +55,10 @@ export function Footer() {
           Looking for the best <span className="text-champagne-300">Permanent Makeup Clinic in Vijayawada</span>? Kairavam serves clients from Vijayawada, Benz Circle, Moghalrajpuram, Labbipet, Poranki, Gunadala and surrounding areas.
         </p>
         <p className="mt-3 text-[11px] text-ink-500">© {new Date().getFullYear()} Kairavam PMU & Aesthetic Studio. All rights reserved.</p>
-        <p className="mt-2 text-[11px] text-ink-500">Powered by <a href="https://digitalverto.com" target="_blank" rel="noopener noreferrer" className="text-champagne-400 transition hover:text-champagne-300">Digital Verto</a></p>
+        <p className="mt-2 text-[11px] text-ink-500">
+          Powered by <a href="https://digitalverto.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-champagne-400 transition hover:text-champagne-300">Digital Verto</a>
+          <img src="/dv-logo.png" alt="Digital Verto" className="ml-1 inline-block h-[30px] w-auto animate-wave align-middle transition hover:opacity-80" />
+        </p>
       </div>
     </footer>
   );
