@@ -33,8 +33,7 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-600 lg:mx-0 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            Expertly crafted permanent makeup designed to enhance your features with natural, long-lasting beauty at
-            Vijayawada's premier aesthetic studio.
+            Wake up to effortlessly beautiful brows, lips, and eyeliner — expertly crafted permanent makeup designed to enhance your natural features with long-lasting, natural-looking results at Vijayawada's premier aesthetic studio.
           </p>
 
           <div className="mt-6 flex flex-wrap justify-center gap-2 lg:justify-start animate-fade-up" style={{ animationDelay: '0.2s' }}>

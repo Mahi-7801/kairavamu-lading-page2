@@ -1,5 +1,3 @@
-import { BeforeAfter, PMU_VISUALS } from './BeforeAfter';
-
 const HIGHLIGHTS = [
   { icon: 'auto_awesome', label: 'Enhanced Brows' },
   { icon: 'mood', label: 'Naturally Tinted Lips' },
@@ -17,14 +15,6 @@ export function Results() {
           <span className="section-eyebrow">✦ Before & After Results</span>
           <h2 className="mt-3 section-title">Real Beauty <span className="emerald-text">Transformations</span></h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-ink-600">Drag the slider to reveal the natural difference PMU can make.</p>
-        </div>
-
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {PMU_VISUALS.map((v) => (
-            <div key={v.label} className="reveal">
-              <BeforeAfter visual={v} />
-            </div>
-          ))}
         </div>
 
         <div className="reveal mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">

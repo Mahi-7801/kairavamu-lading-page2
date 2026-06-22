@@ -12,6 +12,8 @@ interface Treatment {
   visual: VisualType;
   image: string;
   benefits: string[];
+  idealFor?: string[];
+  idealForLabel?: string;
   techniques?: string[];
   price?: string;
   priceNote?: string;
@@ -22,75 +24,14 @@ interface Treatment {
 
 const TREATMENTS: Treatment[] = [
   {
-    id: 'carbon-laser',
-    name: 'Carbon Laser',
-    tagline: 'Deep Cleansing · Glow · Pore Refinement',
-    description: 'Advanced carbon peel laser treatment for deep cleansing, oil control and instant skin brightening.',
-    visual: 'carbon',
-    image: '/carbon-peel.jpg',
-    benefits: ['Deep Cleansing & Oil Control', 'Instant Glow & Skin Brightening', 'Minimizes Pores', 'Improves Skin Texture'],
-    price: '₹3,000 – ₹7,000/session',
-    offer: 'Up To 40% OFF',
-    accent: 'gold',
-  },
-  {
-    id: 'laser-toning',
-    name: 'Laser Toning',
-    tagline: 'Pigmentation · Brightening · Even Tone',
-    description: 'Reduce pigmentation, uneven skin tone and acne marks with advanced laser toning for a natural glow.',
-    visual: 'laser',
-    image: '/laser-toning.jpg',
-    benefits: ['Reduces Pigmentation & Uneven Tone', 'Improves Acne Marks & Texture', 'Brightens Skin', 'Adds Natural Glow'],
-    price: '₹3,000 – ₹7,000/session',
-    offer: 'Up To 40% OFF',
-    accent: 'rose',
-    reverse: true,
-  },
-  {
-    id: 'laser-hair-reduction',
-    name: 'Laser Hair Reduction',
-    tagline: 'Long Term · Smooth Skin · No Ingrown',
-    description: 'Permanent hair reduction solution — no ingrown hairs, no skin darkening, saves time and effort.',
-    visual: 'hair',
-    image: '/laser-uhr1.jpg',
-    benefits: ['Long Term Hair Reduction', 'No Ingrown Hair', 'No Skin Darkening', 'Saves Time & Effort'],
-    price: '₹1,000 – ₹30,000/session',
-    priceNote: 'pricing varies based on treatment area',
-    offer: 'Up To 40% OFF',
-    accent: 'gold',
-  },
-  {
-    id: 'hair-gfc',
-    name: 'Hair GFC',
-    tagline: 'Hair Fall Control · Regrowth · Density',
-    description: 'Safe and natural treatment that reduces hair fall, promotes regrowth and improves hair density.',
-    visual: 'gfc',
-    image: '/Hair%20GFC.webp',
-    benefits: ['Reduces Hair Fall', 'Promotes Hair Regrowth & Density', 'Safe & Natural Treatment', 'Visible Results'],
-    price: '₹5,000 – ₹10,000/session',
-    offer: 'Up To 40% OFF',
-    accent: 'rose',
-    reverse: true,
-  },
-  {
-    id: 'hair-transplant',
-    name: 'Hair Transplant',
-    tagline: 'Permanent Growth · Natural Hairline',
-    description: 'Permanent and natural hair growth solution that restores your hairline and confidence.',
-    visual: 'transplant',
-    image: '/hair-transplant.jpg',
-    benefits: ['Permanent & Natural Hair Growth', 'Restores Hairline & Confidence', 'Low Maintenance Solution', 'Life Changing Results'],
-    price: 'Contact for pricing',
-    accent: 'gold',
-  },
-  {
     id: 'pmu-brows',
     name: 'PMU Brows',
-    tagline: 'Microblading · Ombre · Combination',
-    description: 'Perfectly shaped brows designed to complement your facial features — natural definition that frames your face beautifully.',
+    tagline: 'Fuller, Well-Defined Brows Designed Around You',
+    description: 'Brows play a significant role in framing the face and enhancing overall appearance. PMU Brows help create naturally fuller, more defined eyebrows while reducing the need for daily brow makeup. Every brow design is customized to complement your facial structure, natural brow pattern, and personal preferences.',
     visual: 'brows',
-    image: '/pmu-eyebrows1.jpg',
-    benefits: ['Saves Time Everyday', 'Perfect Shape & Symmetry', 'Long Lasting & Smudgeproof', 'Natural Looking Results'],
+    image: '/pmu-eyebrows2.jpg',
+    benefits: ['Better brow definition', 'Fuller-looking eyebrows', 'Improved symmetry', 'Natural-looking enhancement', 'Reduced daily makeup effort'],
+    idealFor: ['Sparse brows', 'Uneven brows', 'Over-plucked brows', 'Individuals seeking long-lasting brow definition'],
     techniques: ['Microblading', 'Ombre Brows', 'Combination Brows'],
     price: '₹20,000 – ₹40,000',
     priceNote: 'Microblading / Ombre / Combination',
@@ -99,12 +40,14 @@ const TREATMENTS: Treatment[] = [
   },
   {
     id: 'lip-blush',
-    name: 'PMU Lip Blush',
-    tagline: 'Permanent Lip Color',
-    description: 'Enhance your natural lip color and definition with advanced PMU lip blush techniques for a soft, youthful pout.',
+    name: 'Lip Blush',
+    tagline: 'Enhance Natural Lip Colour & Definition',
+    description: 'Lip Blush is a semi-permanent cosmetic treatment designed to enhance the natural appearance of your lips. It can help improve lip definition, create a more balanced appearance, and provide a soft tint that looks fresh and natural. The goal is not to create heavily coloured lips but to enhance what is already there while improving overall lip appearance.',
     visual: 'lips',
-    image: '/pmu-lip1.jpg',
-    benefits: ['Defines Lip Borders', 'Enhances Natural Lip Color', 'Long Lasting & Low Maintenance', 'Beautiful Natural Tint'],
+    image: '/pmu-lip2.jpg',
+    benefits: ['Enhanced lip definition', 'Improved lip symmetry', 'Soft, natural-looking colour', 'Fresher appearance', 'Reduced need for daily lip products'],
+    idealFor: ['Pale lips', 'Uneven lip tone', 'Loss of lip definition', 'Individuals seeking subtle enhancement'],
+    idealForLabel: 'Suitable For',
     price: '₹20,000 – ₹40,000',
     priceNote: 'Based on pigmentation correction and technique',
     offer: 'Up To 25% OFF',
@@ -112,22 +55,38 @@ const TREATMENTS: Treatment[] = [
     reverse: true,
   },
   {
-    id: 'scalp-micropigmentation',
-    name: 'Scalp Micropigmentation (SMP)',
-    tagline: 'Non-Surgical · Instant Density',
-    description: 'Instant fuller hair look with non-surgical scalp pigmentation — quick results, low maintenance, long lasting.',
-    visual: 'smp',
-    image: '/SMP-Scalp-Micro-Pigmentation.webp',
-    benefits: ['Instant Fuller Hair Look', 'Quick Results, Non-Surgical', 'Low Maintenance & Long Lasting', 'Boosts Confidence'],
-    price: '₹20,000 – ₹1,00,000',
-    priceNote: 'Pricing varies based on technique, area and customization',
+    id: 'eyeliner-pmu',
+    name: 'Eyeliner PMU',
+    tagline: 'Long-Lasting Definition for Beautifully Framed Eyes',
+    description: 'Eyeliner PMU enhances the natural beauty of the eyes by creating subtle definition along the lash line. The treatment is customized to suit your eye shape and desired style while maintaining a soft and elegant appearance. It is an ideal option for individuals who regularly wear eyeliner and want to simplify their beauty routine.',
+    visual: 'eyeliner',
+    image: '/pmu-eyebrows1.jpg',
+    benefits: ['Defined eyes', 'Enhanced lash line appearance', 'Reduced daily makeup application', 'Long-lasting results', 'Natural-looking enhancement'],
+    price: '₹15,000 – ₹30,000',
+    priceNote: 'Based on style and thickness',
+    accent: 'rose',
+    reverse: true,
+  },
+  {
+    id: 'brow-correction',
+    name: 'Brow Correction',
+    tagline: 'Improve Previous PMU Brow Work',
+    description: 'Not all permanent makeup results meet expectations. Brow Correction treatments are designed to improve previous brow procedures by adjusting shape, colour, symmetry, or overall appearance. Our specialists carefully assess existing brow work before recommending the most appropriate correction approach.',
+    visual: 'correction',
+    image: '/PMU Eyebrows3.jfif',
+    benefits: ['Improved symmetry', 'Better colour balance', 'Enhanced brow shape', 'More natural-looking results'],
+    idealFor: ['Uneven brows', 'Shape concerns', 'Colour inconsistencies', 'Faded pigment', 'Previous PMU dissatisfaction'],
+    idealForLabel: 'Can Help Address',
+    price: '₹10,000 – ₹25,000',
+    priceNote: 'Based on correction complexity',
     accent: 'gold',
   },
 ];
 
 const CANDIDATES = [
-  'Sparse Eyebrows', 'Uneven Brows', 'Light Colored Lips', 'Lip Pigmentation Concerns',
-  'Hair Thinning', 'Bald Patches', 'Busy Professionals', 'Low Maintenance Beauty Seekers',
+  'Sparse Eyebrows', 'Uneven Brows', 'Lip Pigmentation Concerns', 'Pale Lips',
+  'Hair Thinning', 'Visible Scalp', 'Receding Hairline', 'Previous PMU Concerns',
+  'Busy Professionals', 'Low Maintenance Beauty Seekers', 'Eye Definition Seekers', 'Natural Look Lovers',
 ];
 
 function TreatmentCard({ t, delay, visible }: { t: Treatment; delay: number; visible: boolean }) {
@@ -170,6 +129,17 @@ function TreatmentCard({ t, delay, visible }: { t: Treatment; delay: number; vis
             </li>
           ))}
         </ul>
+
+        {t.idealFor && (
+          <div className="mt-4">
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-ink-500">{t.idealForLabel ?? 'Ideal For'}</div>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {t.idealFor.map((item) => (
+                <span key={item} className="rounded-full border border-champagne-200 bg-champagne-50/60 px-3 py-1 text-xs font-medium text-ink-800">{item}</span>
+              ))}
+            </div>
+          </div>
+        )}
 
         {t.techniques && (
           <div className="mt-4">
@@ -222,11 +192,10 @@ export function Treatments() {
     <section id="treatments" className="relative bg-champagne-radial px-4 py-20 md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="reveal text-center">
-          <span className="section-eyebrow">✦ Treatments We Offer</span>
-          <h2 className="mt-3 section-title">Advanced <span className="gold-text">Aesthetic Treatments</span></h2>
+          <span className="section-eyebrow">✦ Permanent Makeup Solutions</span>
+          <h2 className="mt-3 section-title">Our <span className="gold-text">Permanent Makeup</span> Solutions</h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-ink-600">
-            From laser and carbon treatments to PMU brows and scalp micropigmentation — each procedure is performed with
-            advanced technology and a fully personalized plan.
+            From brows and lips to scalp micropigmentation — each PMU procedure is performed with advanced technology and a fully personalized plan.
           </p>
         </div>
 
@@ -245,7 +214,7 @@ export function Treatments() {
               Our treatments are ideal for anyone seeking advanced aesthetic solutions with natural-looking results.
             </p>
           </div>
-          <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {CANDIDATES.map((c) => (
               <div key={c} className="rounded-2xl border border-champagne-100 bg-champagne-50/40 px-3 py-4 text-center text-sm font-medium text-ink-800 transition-all hover:-translate-y-1 hover:border-champagne-300 hover:bg-white">
                 {c}

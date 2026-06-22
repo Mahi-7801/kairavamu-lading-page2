@@ -1,6 +1,6 @@
 
 
-const EXPERTISE = ['PMU Brows', 'Lip Blush', 'Scalp Micropigmentation', 'Facial Aesthetics', 'Eyeliner PMU', 'Brow Correction'];
+const EXPERTISE = ['10+ Years Experience', 'Certified PMU Specialist', 'Personalized Facial Mapping', 'Natural-Looking Results', 'Advanced Aesthetic Techniques', 'Premium Pigments & Safety Standards'];
 
 export function AboutDoctor() {
   return (
@@ -28,33 +28,13 @@ export function AboutDoctor() {
             advanced PMU techniques and premium pigments.
           </p>
 
-          <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-2xl border border-champagne-200 bg-champagne-50/60 p-4">
-              <span className="material-symbols-outlined text-champagne-600 text-xl">school</span>
-              <div className="mt-2 text-xs uppercase tracking-wider text-ink-500">Qualification</div>
-              <div className="text-sm font-semibold text-ink-800">PG Diploma · Cosmetology</div>
-            </div>
-            <div className="rounded-2xl border border-champagne-200 bg-champagne-50/60 p-4">
-              <span className="material-symbols-outlined text-champagne-600 text-xl">schedule</span>
-              <div className="mt-2 text-xs uppercase tracking-wider text-ink-500">Experience</div>
-              <div className="text-sm font-semibold text-ink-800">10+ Years</div>
-            </div>
-            <div className="rounded-2xl border border-champagne-200 bg-champagne-50/60 p-4">
-              <span className="material-symbols-outlined text-champagne-600 text-xl">reward</span>
-              <div className="mt-2 text-xs uppercase tracking-wider text-ink-500">Focus</div>
-              <div className="text-sm font-semibold text-ink-800">Natural Aesthetics</div>
-            </div>
-          </div>
-
-          <div className="mt-7">
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-champagne-600">Expertise Includes</div>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {EXPERTISE.map((e) => (
-                <span key={e} className="inline-flex items-center gap-1.5 rounded-full border border-champagne-200 bg-white px-3 py-1.5 text-xs font-medium text-ink-800">
-                  <span className="material-symbols-outlined text-champagne-600 text-sm">check_circle</span> {e}
-                </span>
-              ))}
-            </div>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            {EXPERTISE.map((e) => (
+              <div key={e} className="flex items-center gap-3 rounded-2xl border border-champagne-200 bg-champagne-50/60 p-4">
+                <span className="material-symbols-outlined text-champagne-600 text-xl">check_circle</span>
+                <div className="text-sm font-semibold text-ink-800">{e}</div>
+              </div>
+            ))}
           </div>
 
 
