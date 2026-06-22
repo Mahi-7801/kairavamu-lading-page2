@@ -1,4 +1,6 @@
 
+import { WhatsAppIcon } from './WhatsAppIcon';
+import { getWhatsAppUrl } from '../utils';
 
 export function Footer() {
   return (
@@ -8,7 +10,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
         <div className="md:col-span-1">
           <div className="flex items-center gap-3">
-            <img src="/logo_kairavam.png" alt="Kairavam" className="h-10 w-auto brightness-0 invert" />
+            <img src="/logo_kairavam.png" alt="Kairavam" className="h-10 w-auto" />
           </div>
           <p className="mt-4 text-sm leading-relaxed text-ink-300">
             Premium Permanent Makeup clinic in Vijayawada — PMU Brows, Lip Blush, Eyeliner PMU, Brow Correction &
@@ -45,7 +47,7 @@ export function Footer() {
             <li className="flex items-start gap-2"><span className="material-symbols-outlined text-base mt-0.5 flex-shrink-0 text-champagne-400">location_on</span> Fortune Murali Park Road, Above Apollo Pharmacy, 3rd Floor, Moghalrajpuram, Vijayawada – 520010</li>
             <li className="flex items-center gap-2"><span className="material-symbols-outlined text-base flex-shrink-0 text-champagne-400">schedule</span> 10:00 AM – 8:00 PM</li>
             <li><a href="tel:+917998777666" className="flex items-center gap-2 transition hover:text-champagne-300"><span className="material-symbols-outlined text-base text-champagne-400">phone</span> 79987 77666</a></li>
-            <li><a href="https://wa.me/918478060606" target="_blank" rel="noopener" className="flex items-center gap-2 transition hover:text-champagne-300"><span className="material-symbols-outlined text-base text-champagne-400">chat</span> 84780 60606 (WhatsApp)</a></li>
+            <li><a href={getWhatsAppUrl()} target="_blank" rel="noopener" className="flex items-center gap-2 transition hover:text-champagne-300"><WhatsAppIcon className="text-base text-champagne-400" /> 84780 60606 (WhatsApp)</a></li>
           </ul>
         </div>
       </div>

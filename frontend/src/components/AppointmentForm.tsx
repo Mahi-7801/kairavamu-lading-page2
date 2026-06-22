@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { WhatsAppIcon } from './WhatsAppIcon';
+import { getWhatsAppUrl } from '../utils';
 
 
 const TREATMENTS = ['Carbon Laser', 'Laser Toning', 'Laser Hair Reduction', 'Hair GFC', 'Hair Transplant', 'PMU Brows', 'Lip Blush', 'Scalp Micropigmentation', 'Consultation Only'];
@@ -111,8 +113,8 @@ export function AppointmentForm() {
                 </div>
               </a>
             </div>
-            <a href="https://wa.me/918478060606" target="_blank" rel="noopener" className="btn-whatsapp w-full justify-center">
-              <span className="material-symbols-outlined text-base">chat</span> WhatsApp: 84780 60606
+            <a href={getWhatsAppUrl()} target="_blank" rel="noopener" className="btn-whatsapp w-full justify-center">
+              <WhatsAppIcon className="text-base" /> WhatsApp: 84780 60606
             </a>
 
             <div className="mt-2 overflow-hidden rounded-2xl border border-champagne-200 shadow-luxury">

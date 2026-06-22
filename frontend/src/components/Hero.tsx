@@ -1,5 +1,7 @@
 import { BeautyParticles } from './BeautyParticles';
 import { HeroCarousel } from './HeroCarousel';
+import { WhatsAppIcon } from './WhatsAppIcon';
+import { getWhatsAppUrl } from '../utils';
 
 const BADGES = [
   { icon: 'diamond', label: 'Natural Looking Results' },
@@ -46,8 +48,8 @@ export function Hero() {
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:items-start animate-fade-up" style={{ animationDelay: '0.3s' }}>
             <a href="#contact" className="btn-gold w-full sm:w-auto">Book Consultation</a>
-            <a href="https://wa.me/918478060606" target="_blank" rel="noopener" className="btn-whatsapp w-full sm:w-auto">
-              <span className="material-symbols-outlined text-base">chat</span> WhatsApp Now
+            <a href={getWhatsAppUrl()} target="_blank" rel="noopener" className="btn-whatsapp w-full sm:w-auto">
+              <WhatsAppIcon className="text-base" /> WhatsApp Now
             </a>
           </div>
 

@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { WhatsAppIcon } from './WhatsAppIcon';
+import { getWhatsAppUrl } from '../utils';
 
 
 export function FloatingActions() {
@@ -14,8 +16,8 @@ export function FloatingActions() {
       <a href="tel:+917998777666" aria-label="Call Kairavam" className="flex h-12 w-12 items-center justify-center rounded-full bg-ink-900 text-white shadow-luxury-lg transition-transform hover:scale-110 animate-pulse-gold">
         <span className="material-symbols-outlined text-xl">phone</span>
       </a>
-      <a href="https://wa.me/918478060606" target="_blank" rel="noopener" aria-label="WhatsApp Kairavam" className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-luxury-lg transition-transform hover:scale-110">
-        <span className="material-symbols-outlined text-2xl">chat</span>
+      <a href={getWhatsAppUrl()} target="_blank" rel="noopener" aria-label="WhatsApp Kairavam" className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-luxury-lg transition-transform hover:scale-110">
+        <WhatsAppIcon className="text-2xl" />
       </a>
     </div>
   );
@@ -60,7 +62,7 @@ export function ExitIntentPopup() {
         <p className="mt-2 text-center text-sm text-ink-600">Get exclusive offers on selected treatments. Limited time only!</p>
         <div className="mt-5 flex flex-col gap-3">
           <a href="#contact" onClick={() => setOpen(false)} className="btn-gold w-full"><span className="material-symbols-outlined text-base">calendar_today</span> Book Consultation Now</a>
-          <a href="https://wa.me/918478060606" target="_blank" rel="noopener" className="btn-whatsapp w-full"><span className="material-symbols-outlined text-base">chat</span> WhatsApp for Offer</a>
+          <a href={getWhatsAppUrl()} target="_blank" rel="noopener" className="btn-whatsapp w-full"><WhatsAppIcon className="text-base" /> WhatsApp for Offer</a>
         </div>
         <p className="mt-4 text-center text-[11px] text-ink-400">Limited appointments available</p>
       </div>

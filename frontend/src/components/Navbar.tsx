@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { WhatsAppIcon } from './WhatsAppIcon';
+import { getWhatsAppUrl } from '../utils';
 
 
 const LINKS = [
@@ -49,8 +51,8 @@ export function Navbar() {
           </ul>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <a href="https://wa.me/918478060606" target="_blank" rel="noopener" className="btn-whatsapp !px-5 !py-2.5 text-xs">
-              <span className="material-symbols-outlined text-base">chat</span> WhatsApp
+            <a href={getWhatsAppUrl()} target="_blank" rel="noopener" className="btn-whatsapp !px-5 !py-2.5 text-xs">
+              <WhatsAppIcon className="text-base" /> WhatsApp
             </a>
             <a href="#contact" className="btn-gold !px-5 !py-2.5 text-xs">Book Consultation</a>
           </div>
@@ -89,8 +91,8 @@ export function Navbar() {
               ))}
             </ul>
             <div className="mt-auto flex flex-col gap-3">
-              <a href="https://wa.me/918478060606" target="_blank" rel="noopener" className="btn-whatsapp w-full">
-                <span className="material-symbols-outlined text-base">chat</span> WhatsApp Now
+              <a href={getWhatsAppUrl()} target="_blank" rel="noopener" className="btn-whatsapp w-full">
+                <WhatsAppIcon className="text-base" /> WhatsApp Now
               </a>
               <a href="#contact" onClick={() => setOpen(false)} className="btn-gold w-full">Book Consultation</a>
               <a href="tel:+917998777666" className="btn-outline w-full">
