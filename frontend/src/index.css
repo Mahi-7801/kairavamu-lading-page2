@@ -77,16 +77,27 @@
   }
 }
 
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(34px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @layer utilities {
-  .reveal {
+  .fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
-    transform: translateY(34px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-    will-change: opacity, transform;
   }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+  .fade-in-up-delay-1 {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+    opacity: 0;
+  }
+  .fade-in-up-delay-2 {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    opacity: 0;
+  }
+  .fade-in-up-delay-3 {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
+    opacity: 0;
   }
   .shimmer-text {
     background: linear-gradient(90deg, #c8b55a 0%, #e1cf7c 25%, #fdf8f0 50%, #e1cf7c 75%, #c8b55a 100%);
@@ -102,6 +113,48 @@
   }
   .scrollbar-hide::-webkit-scrollbar { display: none; }
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  
+  /* Liquid Morph Animations for Premium Background Glows */
+  @keyframes liquid-morph-1 {
+    0% {
+      border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    33% {
+      border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+      transform: translate(40px, -60px) rotate(120deg) scale(1.08);
+    }
+    66% {
+      border-radius: 28% 72% 37% 63% / 40% 60% 40% 60%;
+      transform: translate(-30px, 40px) rotate(240deg) scale(0.92);
+    }
+    100% {
+      border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      transform: translate(0, 0) rotate(360deg) scale(1);
+    }
+  }
+
+  @keyframes liquid-morph-2 {
+    0% {
+      border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    50% {
+      border-radius: 35% 65% 27% 73% / 45% 55% 45% 55%;
+      transform: translate(-50px, 50px) rotate(180deg) scale(1.1);
+    }
+    100% {
+      border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+      transform: translate(0, 0) rotate(360deg) scale(1);
+    }
+  }
+
+  .animate-liquid-1 {
+    animation: liquid-morph-1 25s ease-in-out infinite;
+  }
+  .animate-liquid-2 {
+    animation: liquid-morph-2 30s ease-in-out infinite;
+  }
 }
 
 ::selection {

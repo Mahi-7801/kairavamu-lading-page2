@@ -2,6 +2,7 @@ import { BeautyParticles } from './BeautyParticles';
 import { HeroCarousel } from './HeroCarousel';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { getWhatsAppUrl } from '../utils';
+import { GreenGlowAnimation } from './GreenGlowAnimation';
 
 const BADGES = [
   { icon: 'diamond', label: 'Natural Looking Results' },
@@ -14,7 +15,10 @@ const SOLUTIONS = ['PMU Brows', 'Lip Blush', 'Eyeliner PMU', 'Brow Correction', 
 
 export function Hero() {
   return (
+    <>
     <section id="home" className="relative overflow-hidden bg-cream-radial pt-28 md:pt-32">
+      {/* Premium Green Liquid Glow Animation */}
+      <GreenGlowAnimation />
       <BeautyParticles count={22} />
       <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-cream-200/40 blur-3xl" />
       <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-cream-200/50 blur-3xl" />
@@ -77,5 +81,84 @@ export function Hero() {
         <span className="material-symbols-outlined text-xl animate-bounce">expand_more</span>
       </a>
     </section>
+
+    {/* ── Good Candidate? Section ─────────────────────────────────── */}
+    <section id="good-candidate" className="relative overflow-hidden bg-forest-600 px-4 py-20 md:px-8">
+      {/* Animated subtle forest glows */}
+      <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-forest-400/20 blur-3xl animate-pulse" style={{ animationDuration: '10s' }} />
+      <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-gold-400/10 blur-3xl animate-pulse" style={{ animationDuration: '13s' }} />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-forest-500/30 blur-[100px] animate-liquid-1" />
+
+      <div className="relative mx-auto max-w-5xl">
+        {/* Header */}
+        <div className="text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-gold-300">
+            <span className="text-base">✦</span> Good Candidate?
+          </span>
+          <h2 className="mt-5 font-display text-4xl font-semibold leading-snug text-white md:text-5xl">
+            Who Is A{' '}
+            <span
+              style={{
+                background: 'linear-gradient(90deg, #f2e3a3 0%, #e1cf7c 50%, #c8b55a 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              Good Candidate?
+            </span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-forest-100/80">
+            Our treatments are ideal for anyone seeking advanced aesthetic solutions with natural-looking results.
+          </p>
+        </div>
+
+        {/* Candidate cards grid */}
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          {[
+            { icon: 'face', label: 'Sparse Eyebrows' },
+            { icon: 'edit', label: 'Uneven Brows' },
+            { icon: 'colorize', label: 'Lip Pigmentation' },
+            { icon: 'water_drop', label: 'Pale Lips' },
+            { icon: 'healing', label: 'Hair Thinning' },
+            { icon: 'visibility', label: 'Visible Scalp' },
+            { icon: 'arrow_back', label: 'Receding Hairline' },
+            { icon: 'auto_fix_high', label: 'Previous PMU Concerns' },
+            { icon: 'work', label: 'Busy Professionals' },
+            { icon: 'spa', label: 'Low Maintenance Beauty' },
+            { icon: 'remove_red_eye', label: 'Eye Definition Seekers' },
+            { icon: 'self_improvement', label: 'Natural Look Lovers' },
+          ].map((item) => (
+            <div
+              key={item.label}
+              className="group flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-gold-400/40 hover:bg-white/10 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
+            >
+              <span className="material-symbols-outlined text-2xl text-gold-400 transition-transform duration-300 group-hover:scale-110">
+                {item.icon}
+              </span>
+              <span className="text-[13px] font-medium leading-tight text-forest-50">{item.label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA row */}
+        <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient px-8 py-3.5 text-sm font-semibold tracking-wide text-ink-900 shadow-gold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-luxury"
+          >
+            Book Free Consultation
+            <span className="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+          <a
+            href="#treatments"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-8 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15"
+          >
+            Explore Treatments
+          </a>
+        </div>
+      </div>
+    </section>
+    </>
   );
 }

@@ -73,7 +73,19 @@ export function BeforeAfter({ visual }: BeforeAfterProps) {
 }
 
 export const PMU_VISUALS: PMUVisual[] = [
-  { label: 'Enhanced Brows', before: '/before_face.png', after: '/after_face.png' },
-  { label: 'Naturally Tinted Lips', before: '/pmu_lips_before.png', after: '/pmu_lips_after.png' },
-  { label: 'Hair GFC Treatment', before: '/hair_gfc_before.png', after: '/hair_gfc_after.png' },
+  {
+    label: 'Lip Blush',
+    before: '/gen_lips_before.png',
+    after: '/gen_lips_after.png',
+  },
+  {
+    label: 'Eyeliner PMU',
+    before: '/gen_eyeliner_before.png',
+    after: '/pmu-eyeliner.png',
+  },
+  {
+    label: 'Brow Correction',
+    before: '/before_face.png',
+    after: '/after_face.png',
+  },
 ];
