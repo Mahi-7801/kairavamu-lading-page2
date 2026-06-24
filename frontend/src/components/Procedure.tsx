@@ -12,7 +12,7 @@ const STEPS = [
 export function Procedure() {
   return (
     <section id="procedure" className="relative overflow-hidden bg-white px-4 py-20 md:px-8">
-      <div className="pointer-events-none absolute right-0 top-20 h-80 w-80 rounded-full bg-champagne-100/50 blur-3xl" />
+      <div className="pointer-events-none absolute right-0 top-20 h-80 w-80 rounded-full bg-cream-100/50 blur-3xl" />
       <div className="mx-auto max-w-7xl">
         <div className="reveal text-center">
           <span className="section-eyebrow">✦ PMU Process</span>
@@ -21,7 +21,7 @@ export function Procedure() {
         </div>
 
         <div className="relative mt-14">
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-champagne-300 via-champagne-400 to-champagne-300 md:block" />
+          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-cream-300 via-gold-400 to-cream-300 md:block" />
           <div className="grid gap-6 md:grid-cols-2">
             {STEPS.map((s, i) => (
               <div key={s.title} className={`reveal flex gap-4 ${i % 2 === 1 ? 'md:flex-row-reverse md:text-right' : ''}`} style={{ transitionDelay: `${i * 0.25}s` }}>
@@ -29,12 +29,12 @@ export function Procedure() {
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gold-gradient text-white shadow-gold">
                     <span className="material-symbols-outlined text-2xl">{s.icon}</span>
                   </div>
-                  <span className="absolute -left-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-bold text-champagne-700 shadow">
+                  <span className="absolute -left-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-bold text-gold-700 shadow">
                     {i + 1}
                   </span>
                 </div>
-                <div className="flex-1 rounded-2xl border border-white/70 bg-white/70 p-5 shadow-luxury backdrop-blur transition-all hover:-translate-y-1 hover:border-champagne-300">
-                  <div className="text-[11px] font-semibold uppercase tracking-wider text-champagne-600">Step {i + 1}</div>
+                <div className="flex-1 rounded-2xl border border-white/70 bg-white/70 p-5 shadow-luxury backdrop-blur transition-all hover:-translate-y-1 hover:border-cream-300">
+                  <div className="text-[11px] font-semibold uppercase tracking-wider text-gold-600">Step {i + 1}</div>
                   <h3 className="mt-1 font-display text-xl font-semibold text-ink-900">{s.title}</h3>
                   <p className="mt-1 text-sm text-ink-600">{s.desc}</p>
                 </div>

@@ -68,10 +68,10 @@ export function WhyChoose() {
           {FEATURES.map((f, i) => (
             <div
               key={f.label}
-              className="rounded-2xl border border-white/70 bg-white/70 p-5 text-center shadow-luxury backdrop-blur transition-all duration-300 hover:-translate-y-1.5 hover:border-champagne-300 hover:shadow-luxury-lg"
+              className="rounded-2xl border border-white/70 bg-white/70 p-5 text-center shadow-luxury backdrop-blur transition-all duration-300 hover:-translate-y-1.5 hover:border-cream-300 hover:shadow-luxury-lg"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-champagne-50 text-champagne-600 transition-colors hover:bg-gold-gradient hover:text-white">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-cream-50 text-gold-600 transition-colors hover:bg-gold-gradient hover:text-white">
                 <span className="material-symbols-outlined text-xl">{f.icon}</span>
               </div>
               <div className="mt-3 text-sm font-medium leading-snug text-ink-800">{f.label}</div>
@@ -81,17 +81,17 @@ export function WhyChoose() {
 
         <StatBar />
 
-        <div className="reveal mt-14 grid items-center gap-6 rounded-3xl border border-champagne-200 bg-gradient-to-r from-champagne-50 to-champagne-100 p-7 md:grid-cols-[1fr_auto_1fr] md:p-9">
+        <div className="reveal mt-14 grid items-center gap-6 rounded-3xl border border-cream-200 bg-gradient-to-r from-cream-50 to-cream-100 p-7 md:grid-cols-[1fr_auto_1fr] md:p-9">
           <div className="text-center md:text-left">
-            <div className="flex items-center justify-center gap-2 text-champagne-600 md:justify-start">
+            <div className="flex items-center justify-center gap-2 text-gold-600 md:justify-start">
               <span className="material-symbols-outlined text-base">pin_drop</span>
               <span className="text-xs font-semibold uppercase tracking-[0.2em]">Vijayawada</span>
             </div>
             <h3 className="mt-2 font-display text-2xl font-semibold text-ink-900">Moghalrajpuram · 3rd Floor, Above Apollo Pharmacy</h3>
           </div>
-          <div className="hidden h-px w-full bg-champagne-200 md:block md:h-16 md:w-px" />
+          <div className="hidden h-px w-full bg-cream-200 md:block md:h-16 md:w-px" />
           <div className="text-center md:text-right">
-            <div className="flex items-center justify-center gap-2 text-champagne-600 md:justify-end">
+            <div className="flex items-center justify-center gap-2 text-gold-600 md:justify-end">
               <span className="material-symbols-outlined text-base">schedule</span>
               <span className="text-xs font-semibold uppercase tracking-[0.2em]">Open Daily</span>
             </div>

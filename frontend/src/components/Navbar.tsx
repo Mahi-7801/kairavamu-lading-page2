@@ -41,7 +41,7 @@ export function Navbar() {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="group relative text-sm font-medium text-ink-700 transition-colors hover:text-champagne-600"
+                  className="group relative text-sm font-medium text-ink-700 transition-colors hover:text-gold-600"
                 >
                   {l.label}
                   <span className="absolute -bottom-1 left-0 h-px w-0 bg-gold-gradient transition-all duration-300 group-hover:w-full" />
@@ -58,7 +58,7 @@ export function Navbar() {
           </div>
 
           <button
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-champagne-300 bg-white/70 text-ink-800 lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-cream-300 bg-white/70 text-ink-800 lg:hidden"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
@@ -83,7 +83,7 @@ export function Navbar() {
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="block rounded-xl px-4 py-3 text-base font-medium text-ink-800 transition-colors hover:bg-champagne-50 hover:text-champagne-700"
+                    className="block rounded-xl px-4 py-3 text-base font-medium text-ink-800 transition-colors hover:bg-cream-50 hover:text-gold-700"
                   >
                     {l.label}
                   </a>

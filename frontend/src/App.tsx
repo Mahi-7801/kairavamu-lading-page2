@@ -21,7 +21,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-champagne-50/40">
+    <div className="relative min-h-screen bg-cream-100">
       <OfferRibbon />
       <Navbar />
       <main>

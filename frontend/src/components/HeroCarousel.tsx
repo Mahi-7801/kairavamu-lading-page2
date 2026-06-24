@@ -92,8 +92,8 @@ export function HeroCarousel() {
             onClick={() => goTo(i)}
             className={`rounded-full transition-all duration-300 ${
               i === current
-                ? 'h-2.5 w-8 bg-champagne-600'
-                : 'h-2.5 w-2.5 bg-champagne-300 hover:bg-champagne-400'
+                ? 'h-2.5 w-8 bg-gold-600'
+                : 'h-2.5 w-2.5 bg-cream-300 hover:bg-gold-400'
             }`}
             aria-label={`Go to ${s.label}`}
           />

@@ -147,9 +147,9 @@ export function Services() {
         <div ref={ref} className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => {
             const isGold = s.accent === 'gold';
-            const borderColor = isGold ? 'border-champagne-200 hover:border-champagne-400' : 'border-rosegold-200 hover:border-rosegold-400';
-            const badgeColor = isGold ? 'bg-champagne-50 text-champagne-700' : 'bg-rosegold-50 text-rosegold-700';
-            const iconColor = isGold ? 'text-champagne-600' : 'text-rosegold-500';
+            const borderColor = isGold ? 'border-cream-200 hover:border-gold-400' : 'border-forest-200 hover:border-forest-400';
+            const badgeColor = isGold ? 'bg-cream-50 text-gold-700' : 'bg-forest-50 text-forest-700';
+            const iconColor = isGold ? 'text-gold-600' : 'text-forest-500';
 
             return (
               <div
@@ -174,7 +174,7 @@ export function Services() {
 
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {s.benefits.slice(0, 3).map((b) => (
-                    <span key={b} className="flex items-center gap-0.5 rounded-full bg-champagne-50/60 px-2 py-0.5 text-[10px] text-ink-600">
+                    <span key={b} className="flex items-center gap-0.5 rounded-full bg-cream-50/60 px-2 py-0.5 text-[10px] text-ink-600">
                       <span className={`material-symbols-outlined text-[10px] ${iconColor}`}>check_circle</span> {b}
                     </span>
                   ))}
@@ -183,14 +183,14 @@ export function Services() {
                   )}
                 </div>
 
-                <div className="mt-4 flex items-center justify-between gap-2 border-t border-champagne-100 pt-3">
+                <div className="mt-4 flex items-center justify-between gap-2 border-t border-cream-100 pt-3">
                   <div>
                     {s.price && <span className={`text-sm font-bold ${iconColor}`}>{s.price}</span>}
                     {s.priceNote && <div className="text-[9px] text-ink-400">{s.priceNote}</div>}
                   </div>
                   <a
                     href="#contact"
-                    className={`inline-flex items-center gap-1 rounded-full border ${isGold ? 'border-champagne-300 text-champagne-700 hover:bg-champagne-50' : 'border-rosegold-300 text-rosegold-700 hover:bg-rosegold-50'} px-3 py-1.5 text-[10px] font-semibold transition-colors`}
+                    className={`inline-flex items-center gap-1 rounded-full border ${isGold ? 'border-gold-300 text-gold-700 hover:bg-cream-50' : 'border-forest-300 text-forest-700 hover:bg-forest-50'} px-3 py-1.5 text-[10px] font-semibold transition-colors`}
                   >
                     Enquire <span className="material-symbols-outlined text-[12px]">arrow_forward</span>
                   </a>

@@ -29,7 +29,7 @@ const TREATMENTS: Treatment[] = [
     tagline: 'Fuller, Well-Defined Brows Designed Around You',
     description: 'Brows play a significant role in framing the face and enhancing overall appearance. PMU Brows help create naturally fuller, more defined eyebrows while reducing the need for daily brow makeup. Every brow design is customized to complement your facial structure, natural brow pattern, and personal preferences.',
     visual: 'brows',
-    image: '/pmu-eyebrows2.jpg',
+    image: '/pmu-brows.png',
     benefits: ['Better brow definition', 'Fuller-looking eyebrows', 'Improved symmetry', 'Natural-looking enhancement', 'Reduced daily makeup effort'],
     idealFor: ['Sparse brows', 'Uneven brows', 'Over-plucked brows', 'Individuals seeking long-lasting brow definition'],
     techniques: ['Microblading', 'Ombre Brows', 'Combination Brows'],
@@ -44,7 +44,7 @@ const TREATMENTS: Treatment[] = [
     tagline: 'Enhance Natural Lip Colour & Definition',
     description: 'Lip Blush is a semi-permanent cosmetic treatment designed to enhance the natural appearance of your lips. It can help improve lip definition, create a more balanced appearance, and provide a soft tint that looks fresh and natural. The goal is not to create heavily coloured lips but to enhance what is already there while improving overall lip appearance.',
     visual: 'lips',
-    image: '/pmu-lip2.jpg',
+    image: '/pmu-lips.png',
     benefits: ['Enhanced lip definition', 'Improved lip symmetry', 'Soft, natural-looking colour', 'Fresher appearance', 'Reduced need for daily lip products'],
     idealFor: ['Pale lips', 'Uneven lip tone', 'Loss of lip definition', 'Individuals seeking subtle enhancement'],
     idealForLabel: 'Suitable For',
@@ -60,7 +60,7 @@ const TREATMENTS: Treatment[] = [
     tagline: 'Long-Lasting Definition for Beautifully Framed Eyes',
     description: 'Eyeliner PMU enhances the natural beauty of the eyes by creating subtle definition along the lash line. The treatment is customized to suit your eye shape and desired style while maintaining a soft and elegant appearance. It is an ideal option for individuals who regularly wear eyeliner and want to simplify their beauty routine.',
     visual: 'eyeliner',
-    image: '/pmu-eyebrows1.jpg',
+    image: '/pmu-eyeliner.png',
     benefits: ['Defined eyes', 'Enhanced lash line appearance', 'Reduced daily makeup application', 'Long-lasting results', 'Natural-looking enhancement'],
     price: '₹15,000 – ₹30,000',
     priceNote: 'Based on style and thickness',
@@ -73,13 +73,27 @@ const TREATMENTS: Treatment[] = [
     tagline: 'Improve Previous PMU Brow Work',
     description: 'Not all permanent makeup results meet expectations. Brow Correction treatments are designed to improve previous brow procedures by adjusting shape, colour, symmetry, or overall appearance. Our specialists carefully assess existing brow work before recommending the most appropriate correction approach.',
     visual: 'correction',
-    image: '/PMU Eyebrows3.jfif',
+    image: '/pmu-correction.png',
     benefits: ['Improved symmetry', 'Better colour balance', 'Enhanced brow shape', 'More natural-looking results'],
     idealFor: ['Uneven brows', 'Shape concerns', 'Colour inconsistencies', 'Faded pigment', 'Previous PMU dissatisfaction'],
     idealForLabel: 'Can Help Address',
     price: '₹10,000 – ₹25,000',
     priceNote: 'Based on correction complexity',
     accent: 'gold',
+  },
+  {
+    id: 'scalp-micropigmentation',
+    name: 'Scalp Micropigmentation (SMP)',
+    tagline: 'Create the Appearance of Fuller Hair Density',
+    description: 'Scalp Micropigmentation (SMP) is a non-surgical cosmetic procedure designed to create the appearance of increased hair density by depositing pigment into the scalp. It is a highly effective solution for hair thinning, receding hairlines, and visible scalp areas.',
+    visual: 'smp',
+    image: '/pmu-smp.png',
+    benefits: ['Non-surgical solution', 'Natural-looking appearance', 'Improved visual density', 'Low maintenance', 'Long-lasting results'],
+    idealFor: ['Hair thinning', 'Visible scalp areas', 'Receding hairlines', 'Reduced hair density', 'Hair loss concerns'],
+    price: '₹20,000 – ₹1,00,000',
+    priceNote: 'Pricing varies based on technique, area and customization',
+    accent: 'gold',
+    reverse: true,
   },
 ];
 
@@ -90,8 +104,8 @@ const CANDIDATES = [
 ];
 
 function TreatmentCard({ t, delay, visible }: { t: Treatment; delay: number; visible: boolean }) {
-  const accentText = t.accent === 'gold' ? 'text-champagne-600' : 'text-rosegold-500';
-  const accentBg = t.accent === 'gold' ? 'bg-gold-gradient' : 'bg-emerald-gradient';
+  const accentText = t.accent === 'gold' ? 'text-gold-600' : 'text-forest-500';
+  const accentBg = t.accent === 'gold' ? 'bg-gold-gradient' : 'bg-forest-gradient';
 
   return (
     <div
@@ -106,9 +120,9 @@ function TreatmentCard({ t, delay, visible }: { t: Treatment; delay: number; vis
     >
       {/* Visual */}
       <div className={t.reverse ? 'md:order-2' : ''}>
-        <div className="relative overflow-hidden rounded-2xl border border-champagne-100 bg-champagne-50/40 shadow-luxury">
+        <div className="relative overflow-hidden rounded-2xl border border-cream-100 bg-cream-50/40 shadow-luxury">
           {t.offer && (
-            <span className="absolute right-3 top-3 z-10 inline-flex items-center gap-1 rounded-full bg-emerald-gradient px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white shadow-md">
+            <span className="absolute right-3 top-3 z-10 inline-flex items-center gap-1 rounded-full bg-forest-gradient px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white shadow-md">
               <span className="material-symbols-outlined text-xs">local_offer</span> {t.offer}
             </span>
           )}
@@ -135,7 +149,7 @@ function TreatmentCard({ t, delay, visible }: { t: Treatment; delay: number; vis
             <div className="text-[11px] font-semibold uppercase tracking-wider text-ink-500">{t.idealForLabel ?? 'Ideal For'}</div>
             <div className="mt-2 flex flex-wrap gap-2">
               {t.idealFor.map((item) => (
-                <span key={item} className="rounded-full border border-champagne-200 bg-champagne-50/60 px-3 py-1 text-xs font-medium text-ink-800">{item}</span>
+                <span key={item} className="rounded-full border border-cream-200 bg-cream-50/60 px-3 py-1 text-xs font-medium text-ink-800">{item}</span>
               ))}
             </div>
           </div>
@@ -146,13 +160,13 @@ function TreatmentCard({ t, delay, visible }: { t: Treatment; delay: number; vis
             <div className="text-[11px] font-semibold uppercase tracking-wider text-ink-500">Techniques</div>
             <div className="mt-2 flex flex-wrap gap-2">
               {t.techniques.map((tc) => (
-                <span key={tc} className="rounded-full border border-champagne-200 bg-champagne-50/60 px-3 py-1 text-xs font-medium text-ink-800">{tc}</span>
+                <span key={tc} className="rounded-full border border-cream-200 bg-cream-50/60 px-3 py-1 text-xs font-medium text-ink-800">{tc}</span>
               ))}
             </div>
           </div>
         )}
 
-        <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-champagne-100 bg-champagne-50/50 px-4 py-3">
+        <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-cream-100 bg-cream-50/50 px-4 py-3">
           {t.price && (
             <div className="text-left">
               <div className={`text-lg font-bold ${accentText}`}>{t.price}</div>
@@ -189,7 +203,7 @@ export function Treatments() {
   }, [started, visibleCount]);
 
   return (
-    <section id="treatments" className="relative bg-champagne-radial px-4 py-20 md:px-8">
+    <section id="treatments" className="relative bg-cream-radial px-4 py-20 md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="reveal text-center">
           <span className="section-eyebrow">✦ Permanent Makeup Solutions</span>
@@ -206,7 +220,7 @@ export function Treatments() {
         </div>
 
         {/* Candidate grid */}
-        <div className="reveal mt-16 rounded-3xl border border-champagne-200 bg-white/70 p-6 backdrop-blur md:p-10">
+        <div className="reveal mt-16 rounded-3xl border border-cream-200 bg-white/70 p-6 backdrop-blur md:p-10">
           <div className="text-center">
             <span className="section-eyebrow">✦ Good Candidate?</span>
             <h3 className="mt-2 font-display text-2xl font-semibold text-ink-900 md:text-3xl">Who Is A Good Candidate?</h3>
@@ -216,7 +230,7 @@ export function Treatments() {
           </div>
           <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {CANDIDATES.map((c) => (
-              <div key={c} className="rounded-2xl border border-champagne-100 bg-champagne-50/40 px-3 py-4 text-center text-sm font-medium text-ink-800 transition-all hover:-translate-y-1 hover:border-champagne-300 hover:bg-white">
+              <div key={c} className="rounded-2xl border border-cream-100 bg-cream-50/40 px-3 py-4 text-center text-sm font-medium text-ink-800 transition-all hover:-translate-y-1 hover:border-cream-300 hover:bg-white">
                 {c}
               </div>
             ))}

@@ -17,20 +17,20 @@ export function FAQ() {
       <div className="mx-auto max-w-3xl">
         <div className="reveal text-center">
           <span className="section-eyebrow">✦ Frequently Asked Questions</span>
-          <h2 className="mt-3 section-title">Everything You <span className="emerald-text">Want To Know</span></h2>
+          <h2 className="mt-3 section-title">Everything You <span className="forest-text">Want To Know</span></h2>
         </div>
 
         <div className="mt-10 flex flex-col gap-3">
           {FAQS.map((f, i) => {
             const isOpen = open === i;
             return (
-              <div key={f.q} className="reveal overflow-hidden rounded-2xl border border-champagne-200 bg-white/70 shadow-luxury backdrop-blur">
+              <div key={f.q} className="reveal overflow-hidden rounded-2xl border border-cream-200 bg-white/70 shadow-luxury backdrop-blur">
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                 >
                   <span className="font-display text-lg font-semibold text-ink-900">{f.q}</span>
-                  <span className={`material-symbols-outlined flex-shrink-0 text-champagne-600 transition-transform duration-300 text-xl ${isOpen ? 'rotate-180' : ''}`}>expand_more</span>
+                  <span className={`material-symbols-outlined flex-shrink-0 text-gold-600 transition-transform duration-300 text-xl ${isOpen ? 'rotate-180' : ''}`}>expand_more</span>
                 </button>
                 <div className={`grid transition-all duration-300 ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                   <div className="overflow-hidden">

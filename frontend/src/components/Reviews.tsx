@@ -158,21 +158,21 @@ function InstaVideo({ src }: { src: string }) {
 export function Reviews() {
   const loop = [...REVIEWS, ...REVIEWS];
   return (
-    <section id="reviews" className="relative overflow-hidden bg-gradient-to-b from-champagne-50 to-white px-4 py-20 md:px-8">
+    <section id="reviews" className="relative overflow-hidden bg-gradient-to-b from-cream-50 to-white px-4 py-20 md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="reveal text-center">
           <span className="section-eyebrow">✦ Google Reviews</span>
           <h2 className="mt-3 section-title">Loved By Clients <span className="gold-text">Across Vijayawada</span></h2>
-          <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-champagne-200 bg-white px-4 py-1.5 shadow-sm">
-            <span className="text-champagne-500">★★★★★</span>
+          <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-cream-200 bg-white px-4 py-1.5 shadow-sm">
+            <span className="text-gold-500">★★★★★</span>
             <span className="text-sm font-semibold text-ink-800">5.0 Rating</span>
-            <span className="text-xs text-ink-500">· {REVIEWS.length} Reviews</span>
+
           </div>
         </div>
       </div>
 
       <div className="group relative mt-12 overflow-hidden">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-champagne-50 to-transparent md:w-32" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-cream-50 to-transparent md:w-32" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent md:w-32" />
         <div className="flex w-max gap-5 animate-marquee group-hover:[animation-play-state:paused]">
           {loop.map((r, i) => (
@@ -181,7 +181,7 @@ export function Reviews() {
                 {r.avatar ? (
                   <img src={r.avatar} alt={r.author} className="h-10 w-10 rounded-full object-cover" />
                 ) : (
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-champagne-200 text-sm font-semibold text-champagne-700">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream-200 text-sm font-semibold text-gold-700">
                     {r.author.charAt(0)}
                   </div>
                 )}
@@ -191,16 +191,10 @@ export function Reviews() {
                 </div>
               </div>
               <blockquote className="mt-3 line-clamp-4 text-sm leading-relaxed text-ink-700">{r.text}</blockquote>
-              {r.photos && r.photos.length > 0 && (
-                <div className="mt-3 flex gap-2 overflow-x-auto scrollbar-hide">
-                  {r.photos.map((p, pi) => (
-                    <img key={pi} src={p} alt="" className="h-16 w-16 flex-shrink-0 rounded-lg object-cover" />
-                  ))}
-                </div>
-              )}
+
               <div className="mt-4 flex items-center justify-between">
                 <div className="text-xs text-ink-500">{r.date}</div>
-                <div className="flex gap-0.5 text-champagne-500">
+                <div className="flex gap-0.5 text-gold-500">
                   {Array.from({ length: r.stars }).map((_, si) => <span key={si} className="material-symbols-outlined text-sm fill-current" style={{ fontVariationSettings: '"FILL" 1' }}>star</span>)}
                 </div>
               </div>

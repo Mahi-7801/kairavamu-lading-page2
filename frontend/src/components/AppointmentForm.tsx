@@ -3,7 +3,7 @@ import { WhatsAppIcon } from './WhatsAppIcon';
 import { getWhatsAppUrl } from '../utils';
 
 
-const TREATMENTS = ['Carbon Laser', 'Laser Toning', 'Laser Hair Reduction', 'Hair GFC', 'Hair Transplant', 'PMU Brows', 'Lip Blush', 'Scalp Micropigmentation', 'Consultation Only'];
+const TREATMENTS = ['PMU Brows', 'Lip Blush', 'Eyeliner PMU', 'Brow Correction', 'Scalp Micropigmentation (SMP)'];
 
 type Errors = Partial<Record<keyof typeof initialForm, string>>;
 
@@ -82,8 +82,8 @@ export function AppointmentForm() {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-champagne-radial px-4 py-20 md:px-8">
-      <div className="pointer-events-none absolute -left-20 bottom-10 h-72 w-72 rounded-full bg-champagne-200/40 blur-3xl" />
+    <section id="contact" className="relative overflow-hidden bg-cream-radial px-4 py-20 md:px-8">
+      <div className="pointer-events-none absolute -left-20 bottom-10 h-72 w-72 rounded-full bg-cream-200/40 blur-3xl" />
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1.1fr]">
         <div className="reveal">
           <span className="section-eyebrow">✦ Contact Us</span>
@@ -92,21 +92,21 @@ export function AppointmentForm() {
 
           <div className="mt-6 flex flex-col gap-3">
             <div className="flex items-start gap-3 rounded-2xl border border-white/70 bg-white/70 p-4 shadow-luxury backdrop-blur">
-              <span className="material-symbols-outlined text-xl mt-0.5 flex-shrink-0 text-champagne-600">location_on</span>
+              <span className="material-symbols-outlined text-xl mt-0.5 flex-shrink-0 text-gold-600">location_on</span>
               <div className="text-sm text-ink-700">
                 Fortune Murali Park Road, Above Apollo Pharmacy, 3rd Floor, Moghalrajpuram, Vijayawada – 520010
               </div>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               <div className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/70 p-4 shadow-luxury backdrop-blur">
-                <span className="material-symbols-outlined text-xl flex-shrink-0 text-champagne-600">schedule</span>
+                <span className="material-symbols-outlined text-xl flex-shrink-0 text-gold-600">schedule</span>
                 <div>
                   <div className="text-[11px] uppercase tracking-wider text-ink-500">Clinic Hours</div>
                   <div className="text-sm font-semibold text-ink-800">10:00 AM – 8:00 PM</div>
                 </div>
               </div>
-              <a href="tel:+917998777666" className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/70 p-4 shadow-luxury backdrop-blur transition hover:border-champagne-300">
-                <span className="material-symbols-outlined text-xl flex-shrink-0 text-champagne-600">phone</span>
+              <a href="tel:+917998777666" className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/70 p-4 shadow-luxury backdrop-blur transition hover:border-gold-300">
+                <span className="material-symbols-outlined text-xl flex-shrink-0 text-gold-600">phone</span>
                 <div>
                   <div className="text-[11px] uppercase tracking-wider text-ink-500">Call</div>
                   <div className="text-sm font-semibold text-ink-800">79987 77666</div>
@@ -117,10 +117,10 @@ export function AppointmentForm() {
               <WhatsAppIcon className="text-base" /> WhatsApp: 84780 60606
             </a>
 
-            <div className="mt-2 overflow-hidden rounded-2xl border border-champagne-200 shadow-luxury">
+            <div className="mt-2 overflow-hidden rounded-2xl border border-cream-200 shadow-luxury">
               <iframe
                 title="Kairavam PMU Studio Location - Vijayawada"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7650.852375143656!2d80.64465607460865!3d16.504568027637607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fb1531f3efc5%3A0xf99a9d5c3d3ccae6!2sKairavam!5e0!3m2!1sen!2sin!4v1781778191420!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7650.852375143656!2d80.64465607460865!3d16.504568027637607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fb1531f3efc5%3A0xf99a9d5c3d3ccae6!2sKairavam!5e0!3m2!1sen!2sin!4v1781712000!5m2!1sen!2sin"
                 className="h-64 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -132,7 +132,7 @@ export function AppointmentForm() {
         <div className="reveal relative">
           <div className="absolute -inset-2 rounded-[2.5rem] bg-gold-gradient opacity-15 blur-2xl" />
           <form onSubmit={submit} noValidate className="relative rounded-[2rem] border border-white/70 bg-white/80 p-6 shadow-luxury-lg backdrop-blur-xl md:p-8">
-            <div className="flex items-center gap-2 text-champagne-600">
+            <div className="flex items-center gap-2 text-gold-600">
               <span className="material-symbols-outlined text-xl">calendar_month</span>
               <span className="text-xs font-semibold uppercase tracking-[0.22em]">Book Your Consultation</span>
             </div>
@@ -169,7 +169,7 @@ export function AppointmentForm() {
               {status === 'loading' ? (<><span className="material-symbols-outlined text-base animate-spin">refresh</span> Sending…</>) : status === 'success' ? (<><span className="material-symbols-outlined text-base">check_circle</span> Request Sent!</>) : 'Book Consultation'}
             </button>
             {status === 'success' && <p className="mt-3 text-center text-xs text-green-700">We received your request. Opening WhatsApp to confirm your appointment…</p>}
-            {status === 'error' && <p className="mt-3 text-center text-xs text-champagne-700">Something went wrong. Please WhatsApp us directly at 84780 60606.</p>}
+            {status === 'error' && <p className="mt-3 text-center text-xs text-gold-700">Something went wrong. Please WhatsApp us directly at 84780 60606.</p>}
             <p className="mt-3 text-center text-[11px] text-ink-500">By submitting, you agree to be contacted about your PMU consultation.</p>
           </form>
         </div>
@@ -179,17 +179,17 @@ export function AppointmentForm() {
         .input {
           width: 100%;
           border-radius: 0.75rem;
-          border: 1px solid #EDE1D6;
+          border: 1px solid #f2e5cc;
           background: rgba(255,255,255,0.7);
           padding: 0.625rem 0.85rem;
           font-size: 0.875rem;
-          color: #242E28;
+          color: #1d2921;
           transition: border-color .2s, box-shadow .2s;
         }
         .input:focus {
           outline: none;
-          border-color: #A68263;
-          box-shadow: 0 0 0 3px rgba(166,130,99,0.18);
+          border-color: #e1cf7c;
+          box-shadow: 0 0 0 3px rgba(225,207,124,0.18);
         }
         .input-error {
           border-color: #d4645a !important;

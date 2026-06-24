@@ -39,7 +39,7 @@ export function BeforeAfter({ visual }: BeforeAfterProps) {
       aria-valuemax={100}
       tabIndex={0}
       onKeyDown={onKey}
-      className="group relative h-[320px] w-full select-none overflow-hidden rounded-2xl border border-champagne-200 shadow-luxury outline-none md:h-[400px] focus-visible:ring-2 focus-visible:ring-champagne-400"
+      className="group relative h-[320px] w-full select-none overflow-hidden rounded-2xl border border-cream-200 shadow-luxury outline-none md:h-[400px] focus-visible:ring-2 focus-visible:ring-gold-400"
       onMouseMove={(e) => dragging.current && update(e.clientX)}
       onMouseDown={(e) => {
         dragging.current = true;
@@ -64,8 +64,8 @@ export function BeforeAfter({ visual }: BeforeAfterProps) {
       <span className="absolute bottom-3 left-1/2 z-20 -translate-x-1/2 rounded-full bg-white/85 px-4 py-1 text-xs font-semibold text-ink-800 backdrop-blur">{visual.label}</span>
 
       <div className="absolute inset-y-0 z-10 w-1 bg-gold-gradient" style={{ left: `${pos}%`, transform: 'translateX(-50%)' }}>
-        <div className="absolute left-1/2 top-1/2 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-luxury ring-2 ring-champagne-200">
-          <span className="material-symbols-outlined text-champagne-600 text-base">drag_handle</span>
+        <div className="absolute left-1/2 top-1/2 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-luxury ring-2 ring-cream-200">
+          <span className="material-symbols-outlined text-gold-600 text-base">drag_handle</span>
         </div>
       </div>
     </div>
