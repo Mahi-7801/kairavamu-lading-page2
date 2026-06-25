@@ -5,7 +5,7 @@ import { getWhatsAppUrl } from '../utils';
 
 const LINKS = [
   { href: '#home', label: 'Home' },
-  { href: '#about-doctor', label: 'About Doctor' },
+  { href: '#about', label: 'About' },
   { href: '#treatments', label: 'PMU Treatments' },
   { href: '#results', label: 'Results' },
   { href: '#reviews', label: 'Reviews' },

@@ -2,9 +2,9 @@
 
 const EXPERTISE = ['10+ Years Experience', '15K+ Happy Clients', '50+ Treatments Offered'];
 
-export function AboutDoctor() {
+export function About() {
   return (
-    <section id="about-doctor" className="relative overflow-hidden bg-white px-4 py-20 md:px-8">
+    <section id="about" className="relative overflow-hidden bg-white px-4 py-20 md:px-8">
       <div className="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-forest-100/50 blur-3xl" />
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
         <div className="reveal relative mx-auto max-w-sm">
@@ -17,7 +17,7 @@ export function AboutDoctor() {
         </div>
 
         <div className="reveal">
-          <span className="section-eyebrow">✦ About The Doctor</span>
+          <span className="section-eyebrow">✦ About</span>
           <h2 className="mt-3 section-title">Yamini Kiran <span className="forest-text">Pasupuleti</span></h2>
           <p className="mt-3 font-display text-xl italic text-ink-700">
             Cosmetologist & Aesthetic

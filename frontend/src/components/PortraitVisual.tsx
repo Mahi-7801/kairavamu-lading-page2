@@ -1,11 +1,9 @@
 interface PortraitVisualProps {
-  variant?: 'hero' | 'doctor';
   className?: string;
 }
 
-/** Generated SVG portrait illustration — luxury aesthetic, no external image dependency. */
-export function PortraitVisual({ variant = 'hero', className }: PortraitVisualProps) {
-  const skinA = variant === 'doctor' ? '#f3dcc6' : '#f7e6d8';
+export function PortraitVisual({ className }: PortraitVisualProps) {
+  const skinA = '#f7e6d8';
   return (
     <svg viewBox="0 0 400 560" className={className} role="img" aria-label="Aesthetic PMU specialist portrait illustration">
       <defs>

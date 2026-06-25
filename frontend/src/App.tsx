@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { WhyChoose } from './components/WhyChoose';
-import { AboutDoctor } from './components/AboutDoctor';
+import { About } from './components/About';
 import { Results } from './components/Results';
 import { Treatments } from './components/Treatments';
 import { Procedure } from './components/Procedure';
@@ -27,7 +27,7 @@ export default function App() {
       <main>
         <Hero />
         <WhyChoose />
-        <AboutDoctor />
+        <About />
         <Treatments />
         <Results />
         <Procedure />

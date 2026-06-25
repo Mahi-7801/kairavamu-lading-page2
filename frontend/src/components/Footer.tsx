@@ -33,7 +33,7 @@ export function Footer() {
         <div>
           <h4 className="font-display text-lg font-semibold text-ink-900">Quick Links</h4>
           <ul className="mt-3 space-y-2 text-sm text-ink-500">
-            <li><a href="#about-doctor" className="transition hover:text-gold-600">About Doctor</a></li>
+            <li><a href="#about" className="transition hover:text-gold-600">About</a></li>
             <li><a href="#results" className="transition hover:text-gold-600">Before & After</a></li>
             <li><a href="#reviews" className="transition hover:text-gold-600">Reviews</a></li>
             <li><a href="#faq" className="transition hover:text-gold-600">FAQ</a></li>
